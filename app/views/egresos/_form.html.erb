@@ -1,0 +1,52 @@
+<%= form_with(model: egreso) do |form| %>
+  <% if egreso.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(egreso.errors.count, "error") %> prohibited this egreso from being saved:</h2>
+
+      <ul>
+        <% egreso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :documento, style: "display: block" %>
+    <%= form.text_field :documento %>
+  </div>
+
+  <div>
+    <%= form.label :nro_doc, style: "display: block" %>
+    <%= form.number_field :nro_doc %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_emision, style: "display: block" %>
+    <%= form.date_field :fecha_emision %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_pago, style: "display: block" %>
+    <%= form.date_field :fecha_pago %>
+  </div>
+
+  <div>
+    <%= form.label :rut_proveedor, style: "display: block" %>
+    <%= form.text_field :rut_proveedor %>
+  </div>
+
+  <div>
+    <%= form.label :monto_egreso, style: "display: block" %>
+    <%= form.number_field :monto_egreso %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_egreso, style: "display: block" %>
+    <%= form.text_field :tipo_egreso %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

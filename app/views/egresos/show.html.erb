@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @egreso %>
+
+<div>
+  <%= link_to "Edit this egreso", edit_egreso_path(@egreso) %> |
+  <%= link_to "Back to egresos", egresos_path %>
+
+  <%= button_to "Destroy this egreso", @egreso, method: :delete %>
+</div>

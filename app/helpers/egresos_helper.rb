@@ -1,0 +1,2 @@
+module EgresosHelper
+end

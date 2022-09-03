@@ -1,0 +1,57 @@
+<%= form_with(model: remuneracion) do |form| %>
+  <% if remuneracion.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(remuneracion.errors.count, "error") %> prohibited this remuneracion from being saved:</h2>
+
+      <ul>
+        <% remuneracion.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :rut_empleado, style: "display: block" %>
+    <%= form.text_field :rut_empleado %>
+  </div>
+
+  <div>
+    <%= form.label :monto_remun, style: "display: block" %>
+    <%= form.number_field :monto_remun %>
+  </div>
+
+  <div>
+    <%= form.label :imposiciones, style: "display: block" %>
+    <%= form.number_field :imposiciones %>
+  </div>
+
+  <div>
+    <%= form.label :anticipo, style: "display: block" %>
+    <%= form.number_field :anticipo %>
+  </div>
+
+  <div>
+    <%= form.label :impuesto_unic, style: "display: block" %>
+    <%= form.number_field :impuesto_unic %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_remu, style: "display: block" %>
+    <%= form.number_field :tipo_remu %>
+  </div>
+
+  <div>
+    <%= form.label :id_remuneracion, style: "display: block" %>
+    <%= form.number_field :id_remuneracion %>
+  </div>
+
+  <div>
+    <%= form.label :mes_remuneracion, style: "display: block" %>
+    <%= form.date_field :mes_remuneracion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

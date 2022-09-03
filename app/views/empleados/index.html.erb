@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Empleados</h1>
+<%= paginate @empleados%>
+<%= link_to "New empleado", new_empleado_path %>
+<div id="empleados">
+  <% @empleados.each do |empleado| %>
+    <%= render empleado %>
+    <p>
+      <%= link_to "Show this empleado", empleado %>
+    </p>
+  <% end %>
+</div>
+

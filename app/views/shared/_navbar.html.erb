@@ -1,0 +1,20 @@
+<nav>
+
+<% if user_signed_in? %>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Ingresos', ingresos_path %>
+    <%= link_to 'Egresos', egresos_path %>
+    <%= link_to 'Empleados', empleados_path %>
+    <%= link_to 'Proveedores', proveedors_path %>
+    <%= link_to 'Clientes', clientes_path %>
+    <%= link_to 'Remuneraciones', remuneracions_path %>
+    <ul class="nav justify-content-end">
+        <li class="nav-item"><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
+    </ul>
+<%else%>
+    <ul class="nav justify-content-end">
+        <li class="nav-item"><%= link_to 'Ingresar', new_user_session_path %></li>
+    </ul>
+
+<% end %>
+</nav>

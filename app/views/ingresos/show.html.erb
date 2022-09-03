@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ingreso %>
+
+<div>
+  <%= link_to "Edit this ingreso", edit_ingreso_path(@ingreso) %> |
+  <%= link_to "Back to ingresos", ingresos_path %>
+
+  <%= button_to "Destroy this ingreso", @ingreso, method: :delete %>
+</div>

@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Proveedores</h1>
+<%= paginate @proveedors%>
+<%= link_to "New proveedor", new_proveedor_path %>
+<div id="proveedors">
+  <% @proveedors.each do |proveedor| %>
+    <%= render proveedor %>
+    <p>
+      <%= link_to "Show this proveedor", proveedor %>
+    </p>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,20 @@
+#tabla ingresos
+      t.references :cliente, type: :string, null: false, foreign_key: true
+#tabla egresos
+      # t.references :proveedor, type: :string, null: false, foreign_key: true
+#tabla remuneraciones
+      t.references :empleado, type: :string, null: false, foreign_key: true
+
+
+#ejemplo para hacer una migracion de tipo referencia
+  rails g migration AddPartNumberToProducts user:references
+
+
+#primera migracion, que añade cliente a ingresos
+  rails g migration AddClientToIngresos cliente:references
+
+#primera migracion, que crea la relacion de provedor con egresos
+    rails g migration AddProvedorToEgresos proveedors:references
+
+#tercera migracion de empleados a remuneraciones
+  rails g migration AddEmpleadoToRemuneracions empleados:references

@@ -1,0 +1,52 @@
+<%= form_with(model: ingreso) do |form| %>
+  <% if ingreso.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ingreso.errors.count, "error") %> prohibited this ingreso from being saved:</h2>
+
+      <ul>
+        <% ingreso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :documento, style: "display: block" %>
+    <%= form.text_field :documento %>
+  </div>
+
+  <div>
+    <%= form.label :nro_doc, style: "display: block" %>
+    <%= form.number_field :nro_doc %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_emision, style: "display: block" %>
+    <%= form.date_field :fecha_emision %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_pago, style: "display: block" %>
+    <%= form.date_field :fecha_pago %>
+  </div>
+
+  <div>
+    <%= form.label :rut_cliente, style: "display: block" %>
+    <%= form.text_field :rut_cliente %>
+  </div>
+
+  <div>
+    <%= form.label :monto_ingreso, style: "display: block" %>
+    <%= form.number_field :monto_ingreso %>
+  </div>
+
+  <div>
+    <%= form.label :tipo_ingreso, style: "display: block" %>
+    <%= form.text_field :tipo_ingreso %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

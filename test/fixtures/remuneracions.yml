@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut_empleado: MyString
+  monto_remun: 1
+  imposiciones: 1
+  anticipo: 1
+  impuesto_unic: 1
+  tipo_remu: 1
+  id_remuneracion: 1
+  mes_remuneracion: 2022-08-29
+
+two:
+  rut_empleado: MyString
+  monto_remun: 1
+  imposiciones: 1
+  anticipo: 1
+  impuesto_unic: 1
+  tipo_remu: 1
+  id_remuneracion: 1
+  mes_remuneracion: 2022-08-29

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  documento: MyString
+  nro_doc: 1
+  fecha_emision: 2022-08-26
+  fecha_pago: 2022-08-26
+  rut_proveedor: MyString
+  monto_egreso: 1
+  tipo_egreso: MyString
+
+two:
+  documento: MyString
+  nro_doc: 1
+  fecha_emision: 2022-08-26
+  fecha_pago: 2022-08-26
+  rut_proveedor: MyString
+  monto_egreso: 1
+  tipo_egreso: MyString

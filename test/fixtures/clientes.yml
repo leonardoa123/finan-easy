@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut_cliente: MyString
+  nombre_cliente: MyString
+
+two:
+  rut_cliente: MyString
+  nombre_cliente: MyString

@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ingresos</h1>
+<%= paginate @ingresos%>
+<%= link_to "New ingreso", new_ingreso_path %>
+<div id="ingresos">
+  <% @ingresos.each do |ingreso| %>
+    <%= render ingreso %>
+    <p>
+      <%= link_to "Show this ingreso", ingreso %>
+    </p>
+  <% end %>
+</div>
+
+
