@@ -17,11 +17,11 @@ employees = []
 end
 
 20.times do |i|
-    providers << Proveedor.create!(rut_proveedor: "#{(i + 1).to_s}-k", nombre_proveedor: Faker::Name.name)
+    providers << Proveedor.create!(rut_proveedor: "#{(i + 1).to_s}-1", nombre_proveedor: Faker::Name.name)
 end
 
 20.times do |i|
-    employees << Empleado.create!(rut_empleado: "#{(i + 1).to_s}-k", 
+    employees << Empleado.create!(rut_empleado: "#{(i + 1).to_s}-0", 
     nombre_empleado: Faker::Name.name,
     tipo_empleado: ["Fijo", "Honorarios"].sample)
 end
